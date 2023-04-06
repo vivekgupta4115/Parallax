@@ -1,0 +1,95 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* ----(3D used kare ke liye)----- */
+  perspective: 10px;
+}
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transform-style: preserve-3d;
+  z-index: -1;
+}
+/* ---(img ko door karne ke liye using transform */
+.background {
+  transform: translateZ(-40px) scale(5);
+}
+
+.foreground {
+  transform: translateZ(-20px) scale(3);
+}
+
+.background,
+.foreground {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+h1 {
+  position: absolute;
+  top: 5rem;
+  font-size: 10rem;
+  color: white;
+  letter-spacing: 4px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+section {
+  background-color: rgba(45, 45, 45);
+  color: white;
+  padding: 5rem 0;
+}
+
+.secHeading {
+  font-size: 5rem;
+  padding: 0 10rem;
+}
+
+.text {
+  font-size: 1.5rem;
+  padding: 0 10px;
+  margin: 5rem 0;
+}
+
+.bg {
+  position: relative;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+}
+
+.desc {
+  position: absolute;
+  background-color: white;
+  color: black;
+  padding: 0.5rem 2.5rem;
+  top: 40%;
+  left: 30%;
+  transform: translateX(50%) translateZ(50%);
+  font-size: 3.5rem;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.bg1 {
+  background-image: url(sport-1.jpg);
+}
+.bg2 {
+  background-image: url(sport-2.jpg);
+}
+.bg3 {
+  background-image: url(sport-3.jpg);
+}
